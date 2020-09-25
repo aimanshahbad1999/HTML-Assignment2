@@ -12,34 +12,53 @@ body{
 .header{
     display:grid;
     grid-template-columns: 40% 60%;
-    padding-left: 110px;
-    padding-right: 110px; 
-    max-width: 100%;
+    padding:0px 0px 0px 110px;
+    width: 100%;
     height:116px;
     background-color: #FFFFFF;
-    
+    position: fixed;
+    z-index: 1;
 }
 
 .logo{
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding: 12px 0px 12px;
 }
 
+.navbar{
+    padding-right:110px; 
+    display: block; 
+   
+}
 #contact{
-    display: flex;
-    justify-content: flex-end;
+    position: relative;
+    right: 0px;
+    text-align: end;
+    right:110px;
     padding-top:16px;
-    font: normal normal normal 12px Lato;
-    color: #8D8D8D;    
+    font-family:Lato;
+    font-size: 12px;
+    color: #8D8D8D;  
+   
 }
 
 #menu{
     display: flex;
-    justify-content: flex-end;
     justify-content: space-between;
     padding-top:35px;
     color:#000000;
     font-weight: bold;
+    list-style-type: none;
+    position: relative;
+    left:-110px;
+    
+}
+
+#menu a{
+    font-family: Poppins;
+    font-weight: 600;
+    font-size:16px;
+    color:#000000;
+    text-decoration: none;
 }
 
 .banner{
@@ -50,23 +69,30 @@ body{
     height:652px;
     width:100%;
     text-align: center;
+    padding-top:253px;
 }
 
 .info1{
-    font: normal normal 600 80px Poppins;
-    color: #292929;
+    font-size: 80px ;
     padding-top: 137px;
 }
 
 .info2{
-    font: normal normal 600 52px Poppins;
-    color:#292929;
+    font-size: 52px ;
 }
 
 .info3{
+    font-size: 30px ;
     padding-top: 30px;
-    font: normal normal bold 30px Poppins;
+}
+
+
+.info1, .info2, .info3{
+    font-weight: bold;
+    font-style: Poppins;
     color: #292929;
+    display: block;
+    
 }
 
 .content{
@@ -76,12 +102,13 @@ body{
 }
 
 .content-info{
-    padding-top:100px;
-    padding-left:110px;
+    padding:100px 0px 0px 110px ;
 }
 
 .text1{
-    font: normal normal bold 24px Poppins;
+    font-family: Poppins ;
+    font-weight: bold;
+    font-size: 24px;
 }
 
 .text1-many{
@@ -90,21 +117,24 @@ body{
 
 .text2{
     margin-top:41px;
-    font: normal normal normal 16px Lato;
-    color: #636363;
 }
 
 .text3{
-    margin-top:31px;
-    font: normal normal normal 16px Lato;
+    margin-top:31px;  
+}
+
+.text2, .text3{
+    font-family: Lato ;
+    font-weight: normal;
+    font-size: 16px;
     color: #636363;
+
 }
 
 .content-bg{
     background-image: url("../images/logo_symbol.png");
     background-repeat: no-repeat;
     padding-left: 230px;  
-    padding-right: 0px;
     background-position:center;
     height:542px;
 }
@@ -121,32 +151,32 @@ body{
 .middle-banner{
     background-image:linear-gradient(rgba(76, 121, 205,0.5),rgba(76, 121, 205,0.5)),url("../images/middle_banner.png");
     max-width: 100%;
-    height:362px;
+    height:263px;
+    padding-top:99px;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
-.middle-info1{
-    padding-top:99px;
-    font: normal normal bold 20px Poppins;
+.middle-info{
+    font-family: Poppins ;
+    font-weight: bold;
+    font-size: 20px;
     color: #FFFFFF;
-}
-
-.middle-info2{
-    font: normal normal bold 20px Poppins;
-    color: #FFFFFF;
+    display: block;
 }
 
 .middle-btn{
     background-color:#F79421;
     width: 288px;
     height: 56px;
-    padding-left:55px;
-    padding-right:55px;
+    padding:0px 55px 0px 55px;
+    font-family: Poppins ;
+    font-weight: bold;
+    font-size: 20px;
     margin-top:46px;
-    font: normal normal bold 20px Poppins;
-    color:#ffffff;
+    border: none;
+    color: #FFFFFF;
 }
 
 .service{
@@ -157,14 +187,23 @@ body{
     text-align:center;
 }
 
-.service-info1{
-    font: normal normal bold 36px Poppins;
-    color: #292929;
+.service-info-a{
+    font-family: Poppins ;
+    font-weight: bold;
+    font-size: 36px;
 }
 
-.service-info2{
-    font: normal normal normal 20px Lato;
+.service-info-b{
+    font-family: Lato ;
+    font-weight: normal;
+    font-size: 20px;
+
+}
+
+.service-info-a, .service-info-b{
     color: #292929;
+    display: block;
+    
 }
 
 .service-list{
@@ -173,32 +212,40 @@ body{
     padding-top:81px;
 }
 
-.service1{
+.service-item{
     text-align: center;
 }
 
-.service1-name{
-    font: normal normal 600 14px Poppins;
+.service-name{
+    font-family: Poppins ;
+    font-weight: 600;
+    font-size: 14px;
     padding-top:23px;
     color: #143763;
+    display: block;
 }
 
-.service1-u{
+.service-name::after{
     border:1px solid #F79421;
     width:52px;
+    height: 0px;
     margin-left:auto;
     margin-right: auto;
     margin-top:15px;
+    display: block;
+    content:"";
 }
 
-.service1-info{
+.service-description{
     margin-top: 16px;
-    font: normal normal normal 14px Lato;
+    font-family: Lato ;
+    font-weight: normal;
+    font-size: 14px;
     color: #636363;
     text-align: center;
 }
 
-.buisness{
+.buisness-client{
     background-image: url("../images/figures_bg.png");
     max-width: 100%;
     height:446px;
@@ -208,8 +255,10 @@ body{
 .buisness-info{
     text-align:center;
     padding-top:100px;
-    color:white;
-    font: normal normal 300 30px Poppins;
+    color:#FFFFFF;
+    font-family: Poppins ;
+    font-weight: 300;
+    font-size: 30px;
 }
 
 .buisness-list{
@@ -219,17 +268,26 @@ body{
     color:white;    
 }
 
-.buisness-list1-info1{
-    font: normal normal normal 59px Poppins;
-    color: #FFFFFF;
+.buisness-item-a{
+    font-family: Poppins ;
+    font-weight: normal;
+    font-size: 59px;
 }
 
-.buisness-list1-info2{
-    font: normal normal bold 20px Lato;
-    color: #FFFFFF;
+.buisness-item-b{
+    font-family: Lato ;
+    font-weight: bold;
+    font-size: 20px;
+
 }
 
-.buisness1{
+.buisness-item-a, .buisness-item-b{
+    color: #FFFFFF;
+    display: block;
+
+}
+
+.buisness-details{
     display:grid;
     grid-template-columns: 50% 50%;
     position: relative;
@@ -237,58 +295,69 @@ body{
 
 }
 
-.buisness1-info1{
+.details-item{
     background-image: linear-gradient(rgba(	8, 114, 186,0.5), rgba(	8, 114, 186,0.5)), url("../images/business.png");
     background-size: cover;
 }
 
-.b1-info1-text{
+.details-item-a{
     padding-left:222px;
     padding-top:189px;
-    font: normal normal normal 16px Lato;
+    font-family: Lato ;
+    font-weight: normal;
+    font-size: 16px;
     color: #FFFFFF;
 }
 
-.b1-info1-text1{
+.details-text1{
     padding-left:45px;
+    display: block;
 }
 
-.b1-info1-text3{
+.video-link{
     padding-top:18px;
     padding-left:372px;
-    font: normal normal bold 22px Poppins;
+    font-family: Poppins ;
+    font-weight: bold;
+    font-size: 22px;
+    display: block;
     color: #FFFFFF;
+    
 }
 
 .buisness1-info2{
     background-color: #E6E6E6;
 }
 
-.b1-info2-logo{
+.details-logo{
     padding-top:44px;
     padding-left: 257px;
 }
 
-.b1-info2-text{
-    padding-top: 19px;
-    padding-left:112px;
+.details-item1-a{
+    padding:19px 0px 0px 112px;
     color: #143763;
-    font: normal normal normal 16px Lato;
+    font-family: Lato ;
+    font-weight: normal;
+    font-size: 16px;
 }
 
-.b1-info2-text1{
+.details-text3{
     padding-left:45px;
 
 }
 
-.b1-info2-text3{
+.details-link{
     padding-top: 18px;
     padding-left: 282px;
-    font: normal normal bold 22px Poppins;
-    color: #143763;
+    font-family: Poppins ;
+    font-weight: bold;
+    font-size: 22px;
+    display: block;
+    color:#143763;
 }
 
-.buisness1-card{
+.details-card{
     position: absolute;
     top:341px;
     background:linear-gradient(rgba(169,169,169,0.5), rgba(169,169,169,0.5));
@@ -298,43 +367,62 @@ body{
     width:87%;
 }
 
-.buisness1-card1{
+.card1{
     position: relative;
     left:24px;
 }
 
 .card1-info1{
-    position: absolute;
+   
     top:16px;
-    font: normal normal 600 26px Poppins;
-    color: #FFFFFF;
+    font-family: Poppins ;
+    font-weight: 600;
+    font-size: 26px;
+  
 }
 
 .card1-info2{
-    position: absolute;
+   
     top:56px;
-    font: normal normal normal 18px Lato;
-    color: #FFFFFF;
+    font-family: Lato ;
+    font-weight: normal;
+    font-size: 18px;
+   
 }
 
-.buisness1-card2{    
+.card1-info1, .card1-info2{
+    position: absolute;
+    color: #FFFFFF;
+    display: block;
+}
+
+.card2{    
     position: relative;
 }
 
-.card2-info1{
-    position: absolute;
-    right: 24px;
+.card2-info1{    
     top:16px;
-    font: normal normal 600 26px Poppins;
-    color: #292929;
+    font-family: Poppins ;
+    font-weight: 600;
+    font-size: 26px;
+
 }
 
 .card2-info2{
+    top:56px;
+    font-family: Lato ;
+    font-weight: normal;
+    font-size: 18px;
+    color: #292929;
+    display: block;
+}
+
+.card2-info1, .card2-info2{
     position: absolute;
     right: 24px;
-    top:56px;
-    font: normal normal normal 18px Lato;
     color: #292929;
+    display: block;
+
 }
 
 .people{
@@ -344,19 +432,29 @@ body{
     background-repeat: no-repeat;
 }
 
-.people-text{
+.people-info{
     text-align: center;
 }
 
-.people-text1{
-    font: normal normal 600 36px Poppins;
-    color: #FFFFFF;
+.people-info-a{
+    
+    font-weight: 600;
+    font-size: 36px;
+   
     padding-top: 68px;
 }
 
-.people-text2{
-    font: normal normal normal 20px Poppins;
+.people-info-b{
+    
+    font-weight: normal;
+    font-size: 20px;
+   
+}
+
+.people-info-a, .people-info-b{
+    font-family: Poppins ;
     color: #FFFFFF;
+
 }
 
 .people-team{
@@ -371,21 +469,18 @@ body{
     justify-content: space-between;
 }
 
-.people-team1{
+.team{
     width:194px;
     height:195px;
     border-radius:50%;
 }
 
-.people-arrow{
+.arrow{
     width:16px;
     height:12px;
     margin-top:93px;
     border: 1px solid #FFFCFC;
-    padding-top:9px;
-    padding-left: 7px;
-    padding-bottom: 9px;
-    padding-right: 7px;
+    padding:9px 7px 9px 7px;
 }
 
 .people-circle{
@@ -395,19 +490,19 @@ body{
 }
 
 .circle1{
-    width:14px;
-    height:14px;
     background-color: #ffffff;
-    border-radius: 50%;
-    margin-right:5px;
 }
 
 .circle2{
+    background-color:#686868;
+}
+
+.circle1, .circle2{
     width:14px;
     height:14px;
-    background-color:#686868;
     border-radius: 50%;
     margin-right:5px;
+
 }
 
 .circle3{
@@ -428,11 +523,13 @@ body{
 
 .message-text{
     text-align: center;
-    font: normal normal bold 40px Poppins;
+    font-family: Poppins ;
+    font-weight: bold;
+    font-size: 40px;
     color:#292929;
 }
 
-.message-input{
+.input{
     padding-left: 110px;
     padding-right: 110px;
     text-align: center;
@@ -440,70 +537,60 @@ body{
     margin-top:68px;
 }
 
-.message-input1{
+.message-input{
     display: inline-block;
     width:300px;
     height:48px;
-    margin-right: 28px;
+    margin: 0;
     padding-left:15px;
 }
 
-.line1{
-    position: absolute;
-    width:32px;
-    margin-top: 93px;
-    margin-left:470px;
-    color:#707070;
+.line{
+    border: 1px solid #707070;;
+    width:38px;
+    height: 0px;
+    display: inline-block;
+    margin-left: -5px;
+    margin-right:-5px;
 }
 
-.line2{
-    position: absolute;
-    width:32px;
-    margin-top: 93px;
-    margin-left:824px;
-    color:#707070;
-}
-
-.line3{
-    position: absolute;
-    width:32px;
-    margin-top: 93px;
-    margin-left:1178px;
-    color:#707070;
-}
 
 .message-btn{
     background-color:#F79421;
     width: 288px;
     height: 56px;
-    padding-top:16px;
-    padding-bottom: 18px;
-    padding-left:75px;
-    padding-right:75px;
+    padding:16px 75px 18px 75px;
     margin-top:69px;
-    font: normal normal bold 20px/30px Poppins;
-    color:#ffffff;    
+    font-family: Poppins ;
+    font-weight: bold;
+    font-size: 20px;
+    color:#ffffff;   
+    border: none; 
 }
 
 .footer-menu{
     max-width:100%;
     height:49px;
-    padding-top:28px;
     color: #FFFFFF;
     background-color: #363636;
-    font: normal normal bold 14px Poppins;
-
-}
-
-.footer-m{
+    font-family: Poppins ;
+    font-weight: bold;
+    font-size: 14px;
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    margin-left:291px;
-    margin-right: 291px;
+    padding:28px 291px 0px 291px;
+    list-style-type: none;
+
 }
 
-.footer{
+.footer-menu a{
+    color:#ffffff;
+    text-decoration: none;
+    
+}
+
+.footer-content{
     padding-top:50px;
     display:flex;
     justify-content: space-between;
@@ -517,20 +604,16 @@ body{
     overflow: hidden;
 }
 
-.f-service-info{
+.f-service{
     color: #E9E9E9;
 }
 
-.f-service-info1{
+.f-service-info{
     color:#BEBEBE;  
 }
 
-.footer-service1{
-    z-index: 1;
-}
 
-
-.footer-service4{
+.footer-service4, .footer-service1{
     z-index: 1;
 }
 
